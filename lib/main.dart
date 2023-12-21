@@ -1,3 +1,4 @@
+import 'package:customscrollview/screens/whatsapp.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const WhatsAppBarClass(),
     );
   }
 }
@@ -51,23 +52,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(color: Colors.white, fontSize: 25)),
               backgroundColor: Colors.blue,
             ),
-            const  SliverAppBar(
+            const SliverAppBar(
               snap: true,
               floating: true,
-              title:  Text('Snap True',
+              title: Text('Snap True',
                   style: TextStyle(color: Colors.white, fontSize: 25)),
               backgroundColor: Colors.orange,
             ),
-            // const SliverAppBar(
-            //   stretch: true,
-              
-            //   elevation: 30,
-            //   shadowColor: Colors.black,
-            //   pinned: true,
-            //   title: Text('Pinned True',
-            //       style: TextStyle(color: Colors.white, fontSize: 25)),
-            //   backgroundColor: Colors.amber,
-            // ),
+            const SliverAppBar(
+              stretch: true,
+              elevation: 30,
+              shadowColor: Colors.black,
+              pinned: true,
+              title: Text('Pinned True',
+                  style: TextStyle(color: Colors.white, fontSize: 25)),
+              backgroundColor: Colors.amber,
+            ),
             SliverPadding(
               padding: const EdgeInsets.all(30),
               sliver: SliverList.builder(
